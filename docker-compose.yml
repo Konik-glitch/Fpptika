@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  blackarch-zsh:
+    container_name: blackarch-zsh
+    build: .
+    hostname: blackarch-zsh
+    network_mode: host
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    volumes:
+      - '~/Pentesting:/home/whoami/Pentesting'
+      - '~/Downloads:/home/whoami/Downloads'
